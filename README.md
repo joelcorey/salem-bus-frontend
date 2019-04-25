@@ -6,7 +6,7 @@ Unlike many other cities across the United States, Salem, Oregon has failed to d
 - The app will have a splash screen explaining basic functionality
 - At a minium the application will display all routes
 - The application will require GPS location for accurate position reporting, the user will opt-in to this
-- The user will be able to search for a destination via Google Places API
+- The user will be able to search for a destination via a maps API
 - App will select the best route/stop based on users destination input
 - User will be able to tap a button and get the closest bus stop
 
