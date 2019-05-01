@@ -5,7 +5,7 @@ import Loading from './component/Loading/Loading';
 
 class App extends Component {
   state = {
-    isLoading: true,
+    isLoading: false,
   }
   render() {
     
