@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      hi
-    </div>
-  );
+import Loading from './component/Loading/Loading';
+
+class App extends Component {
+  state = {
+    isLoading: true,
+  }
+  render() {
+    
+    return (
+      <>
+        <Loading loading={this.state.isLoading} />
+        <main className="App">
+          
+          hi
+        </main>
+      </>
+
+    );
+  }
+  
 }
 
 export default App;
