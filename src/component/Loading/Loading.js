@@ -2,7 +2,7 @@ import React from 'react';
 import './Loading.css';
 import loadingImgJpg from './loading.jpg';
 
-function Loading(props) {
+export default function Loading(props) {
 
   let loading;
 
@@ -21,5 +21,3 @@ function Loading(props) {
   )
   
 }
-
-export default Loading;

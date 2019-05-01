@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Loading from './component/Loading/Loading';
+import Loading from '../Loading/Loading';
+import Message from '../Message/Message';
+import Menu from '../Menu/Menu';
 
 class App extends Component {
   state = {
     isLoading: false,
+    firstLoad: true,
+    message: 'hi',
+    
   }
   render() {
     
@@ -13,8 +18,11 @@ class App extends Component {
       <>
         <Loading loading={this.state.isLoading} />
         <main className="App">
-          
-          hi
+          <Message 
+            message={this.state.message}
+            isActive={false}
+          />
+          <Menu />
         </main>
       </>
 
