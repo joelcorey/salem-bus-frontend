@@ -19,6 +19,7 @@ export default class ArticleListPage extends Component {
     const { stopsList = [] } = this.context
     return stopsList.map(stops =>
       <StopListItem
+        // key={stop.id}
         stop="bus stop prop passed"
       />
     )
