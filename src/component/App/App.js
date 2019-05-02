@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
-import Loading from '../Loading/Loading';
-import Message from '../Message/Message';
-import Menu from '../Menu/Menu';
+import Loading from '../Loading/Loading'
+import Message from '../Message/Message'
+import Header from '../Header/Header'
 
-class App extends Component {
+export default class App extends Component {
   state = {
     isLoading: false,
     firstLoad: true,
@@ -22,7 +22,7 @@ class App extends Component {
             message={this.state.message}
             isActive={false}
           />
-          <Menu />
+          <Header />
         </main>
       </>
 
@@ -30,5 +30,3 @@ class App extends Component {
   }
   
 }
-
-export default App;

@@ -27,3 +27,5 @@ const BusStopApiService = {
   }
 
 }
+
+export default BusStopApiService
