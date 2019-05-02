@@ -8,9 +8,10 @@ export default class StopListItem extends Component {
     return (
       <div className='StopListItem'>
         <header className=''>
-          <h2>
-            Bus stop id / route etc
-          </h2>
+          <h4>
+            Bus stop id: {this.props.stopId} <br />
+            Bus stop name: {this.props.stopName}
+          </h4>
           This is a bus stop
         </header>
         

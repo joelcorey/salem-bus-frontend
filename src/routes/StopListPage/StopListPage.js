@@ -17,9 +17,12 @@ export default class ArticleListPage extends Component {
 
   renderStops() {
     const { stopList = [] } = this.context
+    console.log(stopList)
     return stopList.map(stop =>
       <StopListItem
         key={stop.id}
+        stopId={stop.stopId}
+        stopName={stop.name}
         stop="bus stop prop passed"
       />
     )
