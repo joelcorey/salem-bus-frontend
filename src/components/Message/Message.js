@@ -13,7 +13,7 @@ export default function Message(props) {
     <div className={className}>
 
       <div className="message-menu">
-    	  <a href="javascript:void(0)" className="closebtn" onclick="closeNav()">&times;</a>
+    	  <a href="#" className="closebtn">&times;</a>
       </div>
 
       <p>
