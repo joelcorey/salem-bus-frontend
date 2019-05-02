@@ -17,12 +17,13 @@ export default class App extends Component {
     return (
       <>
         <Loading loading={this.state.isLoading} />
+        <Header />
         <main className="App">
           <Message 
             message={this.state.message}
-            isActive={false}
+            isActive={true}
           />
-          <Header />
+          
         </main>
       </>
 
