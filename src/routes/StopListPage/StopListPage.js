@@ -10,9 +10,9 @@ export default class ArticleListPage extends Component {
   componentDidMount() {
     this.context.clearError()
     BusStopApiService.getStops()
-      console.log('BusStopApiService.getStops()')
-      // .then(this.context.setArticleList)
-      // .catch(this.context.setError)
+      //console.log('BusStopApiService.getStops()')
+      .then(this.context.setStopsList)
+      .catch(this.context.setError)
   }
 
   renderStops() {

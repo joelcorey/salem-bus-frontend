@@ -21,10 +21,10 @@ export default class App extends Component {
   render() {
     
     return (
-      <>
+      <div className="App">
         <Loading loading={this.state.isLoading} />
         <Header />
-        <main className="App">
+        <main className="App-main">
           <Message 
             message={this.state.message}
             isActive={false}
@@ -50,7 +50,7 @@ export default class App extends Component {
           </Switch>
 
         </main>
-      </>
+      </div>
 
     );
   }
