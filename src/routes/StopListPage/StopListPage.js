@@ -10,16 +10,16 @@ export default class ArticleListPage extends Component {
   componentDidMount() {
     this.context.clearError()
     BusStopApiService.getStops()
-      //console.log('BusStopApiService.getStops()')
-      .then(this.context.setStopsList)
+      
+      .then(this.context.setStopList)
       .catch(this.context.setError)
   }
 
   renderStops() {
-    const { stopsList = [] } = this.context
-    return stopsList.map(stops =>
+    const { stopList = [] } = this.context
+    return stopList.map(stop =>
       <StopListItem
-        // key={stop.id}
+        key={stop.id}
         stop="bus stop prop passed"
       />
     )

@@ -3,6 +3,7 @@ import config from '../config'
 
 const BusStopApiService = {
   getStops() {
+    console.log('getStops()')
     return fetch(`${config.STOPS_API_ENDPOINT}/`, {
       headers: {
       },

@@ -16,6 +16,7 @@ export class BusProvider extends Component {
   }
 
   setStopList = stopList => {
+    console.log('this is a string')
     this.setState({ stopList })
   }
 
