@@ -15,7 +15,7 @@ const BusStopApiService = {
   },
   getTimesAtStop(stopId, time) {
     // Non-exact endpoint for at this time and after this time
-    return fetch(`${config.STOPS_API_ENDPOINT}/times/${stopId}/${time}`, {
+    return fetch(`${config.API_ENDPOINT}/stops/times/${stopId}/${time}`, {
       headers: {
       },
     })

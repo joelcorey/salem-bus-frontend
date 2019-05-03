@@ -3,6 +3,10 @@ import config from '../config'
 
 const AuthApiService = {
   postLogin({ user_name, password }) {
+
+    // wtf mate .. flow doesnt reach here
+    console.log('AuthApiService.postLogin()')
+    
     return fetch(`${config.API_ENDPOINT}/auth/login`, {
       method: 'POST',
       headers: {
