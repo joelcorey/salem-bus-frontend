@@ -4,7 +4,7 @@ import BusStopApiService from '../../services/bus-stop-api-service'
 import { Section } from '../../components/Utils/Utils'
 import StopListItem from '../../components/StopListItem/StopListItem'
 
-export default class ArticleListPage extends Component {
+export default class StopListPage extends Component {
   static contextType = BusContext
 
   componentDidMount() {
@@ -17,7 +17,6 @@ export default class ArticleListPage extends Component {
 
   renderStops() {
     const { stopList = [] } = this.context
-    console.log(stopList)
     return stopList.map(stop =>
       <StopListItem
         key={stop.id}

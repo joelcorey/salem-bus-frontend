@@ -13,7 +13,8 @@ export default function Message(props) {
     <div className={className}>
 
       <div className="message-menu">
-    	  <a href="#" className="closebtn">&times;</a>
+        {/* <a href="#" className="closebtn">&times;</a> */}
+        <div>&times;</div>
       </div>
 
       <p>
