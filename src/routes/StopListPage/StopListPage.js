@@ -16,17 +16,17 @@ export default class StopListPage extends Component {
 
   renderStops() {
     const { stopList = [] } = this.context
-    // console.log(stopList)
+    stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
     return stopList.map(stop =>
       
       <StopListItem
         key={stop.id}
         stopId={stop.stopId}
         stopCode={stop.stopCode}
-        stopName={stop.name}
+        stopName={stop.stopName}
         stopDesc={stop.stopDesc}
-        stopLat={stop.stopLat}
-        stopLon={stop.stopLon}
+        stopLat={stop.lat}
+        stopLon={stop.lon}
         arrival={stop.arrival}
         departure={stop.departure}
         tripRouteId={stop.tripRouteId}

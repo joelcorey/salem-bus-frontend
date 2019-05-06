@@ -7,14 +7,13 @@ export default class StopListItem extends Component {
     const { stop } = this.props
     return (
       <div className='StopListItem'>
-        <header className=''>
-          <h4>
-            Bus stop id: {this.props.stopId} <br />
-            Bus stop name: {this.props.stopName}
-          </h4>
-          Stop desc: {this.props.stopDesc}
-        </header>
-        
+       
+        <h4>
+          {this.props.stopId} - {this.props.routeShortName} - {this.props.stopName}
+        </h4>
+        {this.props.stopDesc} <br />
+        Reported arrival: {this.props.arrival}
+        <hr />    
       </div>
     )
   }
