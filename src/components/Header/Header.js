@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Hyph } from '../Utils/Utils'
 import TokenService from '../../services/token-service'
+import Menu from '../Menu/Menu'
 import './Header.css'
 
 export default class Header extends Component {
@@ -38,6 +39,15 @@ export default class Header extends Component {
     )
   }
 
+  renderMenu() {
+    return (
+      <Link 
+        to='/late'>
+        Late bus
+      </Link>
+    )
+  }
+
   render() {
     return (
       <nav className='header'>
@@ -51,6 +61,8 @@ export default class Header extends Component {
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
+        { '|' }
+        {this.renderMenu()}
       </nav>
     )
   }

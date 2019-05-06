@@ -39,7 +39,7 @@ export default class StopListPage extends Component {
   render() {
     const { error } = this.context
     return (
-      <Section list className='ArticleListPage'>
+      <Section list className='StopsListPage'>
         {error
           ? <p className='red'>There was an error, try again</p>
           : this.renderStops()}

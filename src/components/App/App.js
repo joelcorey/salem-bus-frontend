@@ -11,6 +11,7 @@ import StopListPage from '../../routes/StopListPage/StopListPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
+import LateBusPage from '../../routes/LateBusPage/LateBusPage'
 
 export default class App extends Component {
   state = {
@@ -43,6 +44,10 @@ export default class App extends Component {
             <PublicOnlyRoute
               path={'/register'}
               component={RegistrationPage}
+            />
+            <PrivateRoute 
+              path={'/late'}
+              component={LateBusPage}
             />
             <Route
               component={NotFoundPage}

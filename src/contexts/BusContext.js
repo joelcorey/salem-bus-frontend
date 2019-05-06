@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 const BusContext = React.createContext({
   stopsList: [],
+  routesList: [],
   error: null,
   setError: () => {},
   clearError: () => {},
@@ -12,11 +13,17 @@ export default BusContext
 export class BusProvider extends Component {
   state = {
     stopList: [],
+    routeList: [],
     error: null
   }
 
   setStopList = stopList => {
     this.setState({ stopList })
+  }
+
+  setRouteList = routeList => {
+    console.log(routeList)
+    this.setState({ routeList })
   }
 
   setError = error => {
@@ -31,10 +38,12 @@ export class BusProvider extends Component {
   render() {
     const value = {
       stopList: this.state.stopList,
+      routeList: this.state.routeList,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setStopList: this.setStopList,
+      setRouteList: this.setRouteList,
     }
 
     return (
