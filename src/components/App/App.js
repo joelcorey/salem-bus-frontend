@@ -4,6 +4,7 @@ import './App.css'
 import Loading from '../Loading/Loading'
 import Message from '../Message/Message'
 import Header from '../Header/Header'
+import SearchBar from '../SearchBar/SearchBar'
 import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import StopListPage from '../../routes/StopListPage/StopListPage'
@@ -16,7 +17,6 @@ export default class App extends Component {
     isLoading: false,
     firstLoad: true,
     message: 'hi',
-    
   }
   render() {
     
@@ -29,7 +29,7 @@ export default class App extends Component {
             message={this.state.message}
             isActive={false}
           />
-          
+          <SearchBar />
           <Switch>
             <Route
               exact

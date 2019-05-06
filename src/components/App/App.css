@@ -6,6 +6,7 @@
   grid-template-columns: repeat(7, 1fr);
   background-color: #f9f9f9;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-header {
@@ -55,3 +56,4 @@ a:active {
   color: black;
   text-decoration: underline;
 } 
+
