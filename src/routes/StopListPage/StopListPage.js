@@ -10,26 +10,13 @@ export default class StopListPage extends Component {
   componentDidMount() {
     this.context.clearError()
     BusStopApiService.getStops()
-      
       .then(this.context.setStopList)
       .catch(this.context.setError)
   }
 
-  // stopId: stop.stop_id,
-  // stopCode: stop.stop_code,
-  // stopName: stop.stop_name,
-  // stopDesc: stop.stop_desc,
-  // stopLat: stop.stop_lat,
-  // stopLon: stop.stop_lon,
-  // arrival: stop.arrival_time,
-  // departure: stop.departure_time,
-  // tripRouteId: stop.route_id,
-  // routeShortName: stop.route_short_name,
-  // routeLongName: stop.route_long_name
-
   renderStops() {
     const { stopList = [] } = this.context
-    console.log(stopList)
+    // console.log(stopList)
     return stopList.map(stop =>
       
       <StopListItem
