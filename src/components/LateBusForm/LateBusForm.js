@@ -8,16 +8,6 @@ export default class LateBusPage extends Component {
   
   state = { 
     error: null 
-    
-  }
-
-  componentDidMount() {
-    
-  }
-
-  handleLateBusForm = ev => {
-    console.log('hi')
-    this.props.handleLateBus()
   }
 
   render() {
@@ -29,7 +19,7 @@ export default class LateBusPage extends Component {
       <Section list className='LateBusPage'>
         <form
           className='LateBusForm'
-          onSubmit={this.handleLateBusForm}
+          onSubmit={this.props.handleLateBus}
         >
           <div role='alert'>
             {error && <p className='red'>{error}</p>}
@@ -57,6 +47,22 @@ export default class LateBusPage extends Component {
               id='route'
             >
             {routes}
+            </select>
+          </div>
+          <div className=''>
+            <label htmlFor='route'>
+              On time
+            </label>
+            <select
+              required
+              name='route'
+              id='route'
+            >
+              <option>10 minutes late</option>
+              <option>5 minutes late</option>
+              <option>On time</option>
+              <option>5 minutes early</option>
+              <option>10 minutes early</option>
             </select>
           </div>
           

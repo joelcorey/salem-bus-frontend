@@ -22,11 +22,12 @@ export default class LateBusPage extends Component {
   }
 
   handleLateBusForm = ev => {
+    ev.preventDefault()
     console.log('hi')
   }
 
   render() {
-    console.log(this.context.routeList)
+    
     return (
       <Section className='LateBusPage'>
         <LateBusForm 
