@@ -11,7 +11,13 @@ export default class LateBusPage extends Component {
     location: {},
     history: {
       push: () => {},
-    },
+    }
+  }
+
+  state={
+    stopId: null,
+    route: null,
+    delay: null
   }
 
   componentDidMount() {
@@ -21,9 +27,21 @@ export default class LateBusPage extends Component {
       .catch(this.context.setError)
   }
 
-  handleLateBusForm = ev => {
-    ev.preventDefault()
-    console.log('hi')
+  handleChangeStopId = (event) => {
+    this.setState({ stopId: event.target.value })
+  }
+
+  handleChangeRouteName = (event) => {
+    this.setState({ route: event.target.value })
+  }
+
+  handleChangeDelay = (event) => {
+    this.setState({ delay: event.target.value })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(`${this.state.stopId} ${this.state.route} ${this.state.delay}`)
   }
 
   render() {
@@ -31,8 +49,11 @@ export default class LateBusPage extends Component {
     return (
       <Section className='LateBusPage'>
         <LateBusForm 
-          handleLateBus={this.handleLateBusForm}
           routes={this.context.routeList}
+          handleChangeStopId={this.handleChangeStopId}
+          handleChangeRouteName={this.handleChangeRouteName}
+          handleChangeDelay={this.handleChangeDelay}
+          handleSubmit={this.handleSubmit}
         />
       </Section>
     )

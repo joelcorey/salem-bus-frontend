@@ -7,19 +7,19 @@ export default class LateBusPage extends Component {
   static contextType = BusContext
   
   state = { 
-    error: null 
+    error: null,
   }
 
   render() {
     const { error } = this.state 
 
-    const routes = this.props.routes.map(route => <option>{route.routeShortName}</option>)
+    const routes = this.props.routes.map(route => <option value={route.routeShortName}>{route.routeShortName}</option>)
     
     return (
       <Section list className='LateBusPage'>
         <form
           className='LateBusForm'
-          onSubmit={this.props.handleLateBus}
+          onSubmit={this.props.handleSubmit}
         >
           <div role='alert'>
             {error && <p className='red'>{error}</p>}
@@ -32,10 +32,9 @@ export default class LateBusPage extends Component {
               required
               name='stopId'
               type='text'
-              id='stop_id'
-            >
-
-            </Input>
+              id='stopId'
+              onChange={this.props.handleChangeStopId}
+            />
           </div>
           <div className=''>
             <label htmlFor='route'>
@@ -45,18 +44,20 @@ export default class LateBusPage extends Component {
               required
               name='route'
               id='route'
+              onChange={this.props.handleChangeRouteName}
             >
-            {routes}
+              {routes}
             </select>
           </div>
           <div className=''>
             <label htmlFor='route'>
-              On time
+              Delay
             </label>
             <select
               required
               name='route'
               id='route'
+              onChange={this.props.handleChangeDelay}
             >
               <option>10 minutes late</option>
               <option>5 minutes late</option>
