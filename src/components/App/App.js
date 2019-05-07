@@ -30,7 +30,7 @@ export default class App extends Component {
             message={this.state.message}
             isActive={false}
           />
-          <SearchBar />
+          {/* <SearchBar /> */}
           <Switch>
             <Route
               exact

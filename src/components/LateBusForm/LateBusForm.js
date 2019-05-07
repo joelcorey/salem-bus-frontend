@@ -6,14 +6,13 @@ import { Button, Input } from '../Utils/Utils'
 export default class LateBusPage extends Component {
   static contextType = BusContext
   
-  state = { error: null }
+  state = { 
+    error: null 
+    
+  }
 
   componentDidMount() {
     console.log(this.props.routes)
-  }
-
-  handleBuildRouteList() {
-    
   }
 
   handleLateBusForm = ev => {
@@ -23,7 +22,7 @@ export default class LateBusPage extends Component {
 
   render() {
     const { error } = this.state 
-    this.handleBuildRouteList()
+    
     return (
       <Section list className='LateBusPage'>
         <form
@@ -41,7 +40,11 @@ export default class LateBusPage extends Component {
               required
               name='stopId'
               type='text'
-              id='stop_id'>
+              id='stop_id'
+            >
+              {/* {this.props.routes.map((e, key) => {
+                return <option key={key} value={e.routeShortName}>{e.routeShortName}</option>
+              })} */}
             </Input>
           </div>
           <div className='user_name'>

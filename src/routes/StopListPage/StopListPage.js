@@ -3,7 +3,7 @@ import BusContext from '../../contexts/BusContext'
 import BusStopApiService from '../../services/bus-stop-api-service'
 import { Section } from '../../components/Utils/Utils'
 import StopListItem from '../../components/StopListItem/StopListItem'
-
+import SearchBar from '../../components/SearchBar/SearchBar'
 export default class StopListPage extends Component {
   static contextType = BusContext
 
@@ -39,11 +39,15 @@ export default class StopListPage extends Component {
   render() {
     const { error } = this.context
     return (
-      <Section list className='StopsListPage'>
-        {error
-          ? <p className='red'>There was an error, try again</p>
-          : this.renderStops()}
-      </Section>
+      <>
+        <SearchBar />
+        <Section list className='StopsListPage'>
+        
+          {error
+            ? <p className='red'>There was an error, try again</p>
+            : this.renderStops()}
+        </Section>'
+      </>
     )
   }
 }

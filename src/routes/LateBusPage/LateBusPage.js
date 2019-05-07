@@ -14,15 +14,8 @@ export default class LateBusPage extends Component {
     },
   }
 
-  // componentDidMount() {
-  //   this.context.clearError()
-  //   BusStopApiService.getStops()
-  //     .then(this.context.setStopList)
-  //     .catch(this.context.setError)
-  // }
-
   componentDidMount() {
-    //this.context.clearError()
+    this.context.clearError()
     BusStopApiService.getRoutes()
       .then(this.context.setRouteList)
       .catch(this.context.setError)
@@ -38,7 +31,7 @@ export default class LateBusPage extends Component {
       <Section className='LateBusPage'>
         <LateBusForm 
           handleLateBus={this.handleLateBusForm}
-          routes={this.context.routesList}
+          routes={this.context.routeList}
         />
       </Section>
     )
