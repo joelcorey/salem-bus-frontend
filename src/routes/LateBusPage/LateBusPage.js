@@ -26,7 +26,7 @@ export default class LateBusPage extends Component {
   }
 
   render() {
-    //console.log(this.context)
+    console.log(this.context.routeList)
     return (
       <Section className='LateBusPage'>
         <LateBusForm 

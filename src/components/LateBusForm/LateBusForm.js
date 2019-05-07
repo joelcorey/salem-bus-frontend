@@ -12,7 +12,7 @@ export default class LateBusPage extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.routes)
+    
   }
 
   handleLateBusForm = ev => {
@@ -22,6 +22,8 @@ export default class LateBusPage extends Component {
 
   render() {
     const { error } = this.state 
+
+    const routes = this.props.routes.map(route => <option>{route.routeShortName}</option>)
     
     return (
       <Section list className='LateBusPage'>
@@ -42,19 +44,19 @@ export default class LateBusPage extends Component {
               type='text'
               id='stop_id'
             >
-              {/* {this.props.routes.map((e, key) => {
-                return <option key={key} value={e.routeShortName}>{e.routeShortName}</option>
-              })} */}
+
             </Input>
           </div>
-          <div className='user_name'>
+          <div className=''>
             <label htmlFor='route'>
               Route
             </label>
             <select
               required
-              name='user_name'
-              id='route'>
+              name='route'
+              id='route'
+            >
+            {routes}
             </select>
           </div>
           

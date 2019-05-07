@@ -30,7 +30,7 @@ export class BusProvider extends Component {
   }
 
   setRouteList = routeList => {
-    console.log(routeList)
+    //console.log(routeList)
     this.setState({ routeList })
   }
 
