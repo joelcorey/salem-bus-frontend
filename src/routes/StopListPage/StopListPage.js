@@ -9,9 +9,9 @@ export default class StopListPage extends Component {
 
   componentDidMount() {
     this.context.clearError()
-    BusStopApiService.getStops()
-      .then(this.context.setStopList)
-      .catch(this.context.setError)
+    // BusStopApiService.getStops()
+    //   .then(this.context.setStopList)
+    //   .catch(this.context.setError)
   }
 
   renderStops() {
@@ -46,7 +46,7 @@ export default class StopListPage extends Component {
           {error
             ? <p className='red'>There was an error, try again</p>
             : this.renderStops()}
-        </Section>'
+        </Section>
       </>
     )
   }

@@ -4,9 +4,12 @@ const BusContext = React.createContext({
   stopsList: [],
   routesList: [],
   error: null,
+  authToken: null,
   setError: () => {},
   clearError: () => {},
   setStopList: () => {},
+  // setAuthToken: () => {},
+  // setLoggedIn: () => {}
 })
 export default BusContext
 
@@ -14,8 +17,13 @@ export class BusProvider extends Component {
   state = {
     stopList: [],
     routeList: [],
+    authToken: null,
     error: null
   }
+
+  // setAuthToken = authToken => {
+  //   this.setState({ authToken })
+  // }
 
   setStopList = stopList => {
     this.setState({ stopList })
@@ -44,6 +52,8 @@ export class BusProvider extends Component {
       clearError: this.clearError,
       setStopList: this.setStopList,
       setRouteList: this.setRouteList,
+      // setAuthToken: this.setAuthToken,
+      // setLoggedIn: this.setLoggedIn
     }
 
     return (

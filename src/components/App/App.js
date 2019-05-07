@@ -27,7 +27,7 @@ export default class App extends Component {
         <Header />
         <main className="App">
           <Message 
-            message={this.state.message}
+            message='Please enter a stop ID number above to search for bus times.'
             isActive={false}
           />
           {/* <SearchBar /> */}

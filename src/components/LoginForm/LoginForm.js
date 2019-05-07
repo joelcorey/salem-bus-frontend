@@ -2,13 +2,19 @@ import React, { Component } from 'react'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
+import BusContext, { BusProvider } from '../../contexts/BusContext'
 
 export default class LoginForm extends Component {
+  static contextType = BusContext
+
   static defaultProps = {
     onLoginSuccess: () => {}
   }
 
-  state = { error: null }
+  state = { 
+    error: null,
+    authToken: null,
+  }
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
@@ -22,6 +28,9 @@ export default class LoginForm extends Component {
       .then(res => {
         user_name.value = ''
         password.value = ''
+        // this.context.setAuthToken({ authToken: res.authToken })
+        console.log(this.context.authToken)
+ 
         TokenService.saveAuthToken(res.authToken)
         this.props.onLoginSuccess()
       })
@@ -31,6 +40,7 @@ export default class LoginForm extends Component {
   }
 
   render() {
+    
     const { error } = this.state
     return (
       <form
@@ -65,6 +75,7 @@ export default class LoginForm extends Component {
           Login
         </Button>
       </form>
+      
     )
   }
 }
