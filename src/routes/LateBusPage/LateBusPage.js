@@ -52,7 +52,7 @@ export default class LateBusPage extends Component {
           routes={this.context.routeList}
           handleChangeStopId={this.handleChangeStopId}
           handleChangeRouteName={this.handleChangeRouteName}
-          handleChangeDelay={this.handleChangeDelay}
+          handleChangeDelay={this.handleChangeDelayb}
           handleSubmit={this.handleSubmit}
         />
       </Section>

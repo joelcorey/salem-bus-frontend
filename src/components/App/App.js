@@ -30,7 +30,7 @@ export default class App extends Component {
             message='Please enter a stop ID number above to search for bus times.'
             isActive={false}
           />
-          {/* <SearchBar /> */}
+          
           <Switch>
             <Route
               exact

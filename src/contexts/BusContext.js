@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import TokenService from '../services/token-service';
 
 const BusContext = React.createContext({
-  stopsList: [],
-  routesList: [],
-  error: null,
-  authToken: null,
-  setError: () => {},
-  clearError: () => {},
-  setStopList: () => {},
+  // stopsList: [],
+  // routesList: [],
+  // error: null,
+  // authToken: TokenService.getAuthToken(),
+  // setError: () => {},
+  // clearError: () => {},
+  // setStopList: () => {},
   // setAuthToken: () => {},
   // setLoggedIn: () => {}
 })
@@ -17,13 +18,14 @@ export class BusProvider extends Component {
   state = {
     stopList: [],
     routeList: [],
-    authToken: null,
+    authToken: TokenService.getAuthToken(),
     error: null
   }
-
-  // setAuthToken = authToken => {
-  //   this.setState({ authToken })
-  // }
+  
+  setAuthToken = authToken => {
+    console.log(authToken)
+    this.setState({ authToken })
+  }
 
   setStopList = stopList => {
     this.setState({ stopList })
@@ -52,8 +54,8 @@ export class BusProvider extends Component {
       clearError: this.clearError,
       setStopList: this.setStopList,
       setRouteList: this.setRouteList,
-      // setAuthToken: this.setAuthToken,
-      // setLoggedIn: this.setLoggedIn
+      setAuthToken: this.setAuthToken,
+      authToken: this.state.authToken
     }
 
     return (

@@ -9,12 +9,9 @@ import BusContext from '../../contexts/BusContext';
 export default class Header extends Component {
   static contextType = BusContext
 
-  state={
-    hideLogout: true
-  }
   handleLogoutClick = () => {
+    this.context.setAuthToken(null)
     TokenService.clearAuthToken()
-    this.setState({ hideLogout: !this.state.hideLogout })
   }
 
   renderLogoutLink() {
@@ -57,6 +54,7 @@ export default class Header extends Component {
   }
 
   render() {
+    console.log(this.context)
     return (
       <nav className='header'>
         <h1>
@@ -67,7 +65,7 @@ export default class Header extends Component {
           </Link>
         </h1>
         {/* {TokenService.hasAuthToken() */}
-        {TokenService.hasAuthToken()
+        {this.context.authToken
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
         { '|' }
