@@ -17,7 +17,7 @@ export default class LateBusPage extends Component {
   state={
     stopId: null,
     routeShortName: null,
-    delay: null
+    delay: 0
   }
 
   componentDidMount() {
@@ -62,7 +62,7 @@ export default class LateBusPage extends Component {
           routeShortName={this.state.routeShortName}
           handleChangeStopId={this.handleChangeStopId}
           handleChangeRouteName={this.handleChangeRouteName}
-          handleChangeDelay={this.handleChangeDelayb}
+          handleChangeDelay={this.handleChangeDelay}
           handleSubmit={this.handleSubmit}
         />
       </Section>

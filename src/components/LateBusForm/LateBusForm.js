@@ -72,11 +72,9 @@ export default class LateBusPage extends Component {
             className="Select"
             onChange={this.props.handleChangeDelay}
           >
-            <option>10 minutes late</option>
-            <option>5 minutes late</option>
-            <option>On time</option>
-            <option>5 minutes early</option>
-            <option>10 minutes early</option>
+            <option value="10-min-late">10 minutes late</option>
+            <option value="0-min-late" selected>On time</option>
+            <option value="10-min-early">10 minutes early</option>
           </select>
         </div>
         
