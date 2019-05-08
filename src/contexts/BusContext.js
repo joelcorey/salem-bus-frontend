@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TokenService from '../services/token-service';
+import { thisExpression } from '@babel/types';
 
 const BusContext = React.createContext({
   // stopsList: [],
@@ -18,12 +19,23 @@ export class BusProvider extends Component {
   state = {
     stopList: [],
     routeList: [],
+    delayList: [],
     authToken: TokenService.getAuthToken(),
+    userName: null,
     error: null
+  }
+
+  updateDelayList = delay => {
+    // updatedDelayList = this.state.delayList.push(delay)
+    // this.setState({ updatedDelayList })
+    this.setState({ delayList: [...this.state.delayList, delay] })
+  }
+
+  setUserName = userName => {
+    this.setState({ userName })
   }
   
   setAuthToken = authToken => {
-    console.log(authToken)
     this.setState({ authToken })
   }
 
@@ -32,7 +44,6 @@ export class BusProvider extends Component {
   }
 
   setRouteList = routeList => {
-    //console.log(routeList)
     this.setState({ routeList })
   }
 

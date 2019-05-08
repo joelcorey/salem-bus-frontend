@@ -14,14 +14,8 @@ export default class LoginPage extends Component {
   }
 
   handleLoginSuccess = () => {
-    //this.context.setAuthToken({ authToken: res.authToken })
-    // this.context.loggedIn === null ?
-    //   this.context.setLoggedIn({ loggedIn: true }) :
-    //   this.context.setLoggedIn({ loggedIn: false })
-
     const { location, history } = this.props
     const destination = (location.state || {}).from || '/'
-    //console.log(destination)
     history.push(destination)
   }
 

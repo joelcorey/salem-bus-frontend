@@ -29,7 +29,7 @@ export default class LoginForm extends Component {
         user_name.value = ''
         password.value = ''
         this.context.setAuthToken(res.authToken)
- 
+        this.context.setUserName(user_name)
         TokenService.saveAuthToken(res.authToken)
         this.props.onLoginSuccess()
       })
