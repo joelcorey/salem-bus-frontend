@@ -4,6 +4,8 @@ import BusStopApiService from '../../services/bus-stop-api-service'
 import { Section } from '../../components/Utils/Utils'
 import StopListItem from '../../components/StopListItem/StopListItem'
 import SearchBar from '../../components/SearchBar/SearchBar'
+import './StopListPage.css'
+
 export default class StopListPage extends Component {
   static contextType = BusContext
 

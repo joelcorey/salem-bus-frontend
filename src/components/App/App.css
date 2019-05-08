@@ -9,6 +9,13 @@
   overflow-x: hidden;
 }
 
+section {
+  grid-column: 0 / 8;
+  grid-row: 2 / 8;
+  padding: 0;
+  margin: 0;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
