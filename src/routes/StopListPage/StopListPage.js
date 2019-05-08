@@ -19,8 +19,15 @@ export default class StopListPage extends Component {
   renderStops() {
     const { stopList = [] } = this.context
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
-    return stopList.map(stop =>
-      
+    
+    const seen = new Set()
+    const filteredStops = stopList.filter(el => {
+      const duplicate = seen.has(el.routeShortName);
+      seen.add(el.routeShortName);
+      return !duplicate;
+    });
+   
+    return filteredStops.map(stop =>
       <StopListItem
         key={stop.id}
         stopId={stop.stopId}
