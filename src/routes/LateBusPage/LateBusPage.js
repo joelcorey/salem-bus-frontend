@@ -39,9 +39,25 @@ export default class LateBusPage extends Component {
     this.setState({ delay: event.target.value })
   }
 
+  // user_id, 
+  // stop_id, 
+  // stop_number, 
+  // route_id,
+  // route_short_name,
+  // delay_time,
+
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log(`${this.state.stopId} ${this.state.route} ${this.state.delay}`)
+    //console.log(`${this.state.stopId} ${this.state.route} ${this.state.delay}`)
+    let delay = {
+      user_name: this.context.userName,
+      stop_id: this.state.stopId,
+      stop_number: this.state.number,
+      route_id: this.state.routeId,
+      route_short_name: this.state.route,
+      delay_time: this.state.delay,
+    }
+    BusStopApiService.postDelay(delay)
   }
 
   render() {

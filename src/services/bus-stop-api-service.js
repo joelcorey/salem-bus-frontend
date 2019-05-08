@@ -42,7 +42,7 @@ const BusStopApiService = {
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(delay),
     })
       .then(res =>
         (!res.ok)
