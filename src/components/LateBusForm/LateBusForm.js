@@ -60,16 +60,17 @@ export default class LateBusPage extends Component {
             {routes}
           </select>
         </div>
+        <hr />
         <div className=''>
           <label htmlFor='route'>
-            Delay
+            How late is the bus?
           </label>
           <select
             required
             name='route'
             id='route'
             className="Select"
-            // onChange={this.props.handleChangeDelay}
+            onChange={this.props.handleChangeDelay}
           >
             <option>10 minutes late</option>
             <option>5 minutes late</option>
