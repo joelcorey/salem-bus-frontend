@@ -22,7 +22,7 @@ export default class LateBusPage extends Component {
         return <option value={route.routeShortName}>{route.routeShortName}</option>
       }
     })
-    
+
     return (
       <Section list className='LateBusPage'>
         <form
@@ -42,10 +42,11 @@ export default class LateBusPage extends Component {
               type='text'
               id='stopId'
               value={this.props.stopId}
+              disabled
               onChange={this.props.handleChangeStopId}
             />
           </div>
-          <div className=''>
+          <div className='stop-id'>
             <label htmlFor='route'>
               Route
             </label>
@@ -53,6 +54,7 @@ export default class LateBusPage extends Component {
               required
               name='route'
               id='route'
+              disabled
               onChange={this.props.handleChangeRouteName}
             >
               {routes}
