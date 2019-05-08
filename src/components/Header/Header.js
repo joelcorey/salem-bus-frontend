@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Hyph } from '../Utils/Utils'
 import TokenService from '../../services/token-service'
-import Menu from '../Menu/Menu'
 import './Header.css'
 import BusContext from '../../contexts/BusContext';
 
@@ -54,7 +53,6 @@ export default class Header extends Component {
   }
 
   render() {
-    console.log(this.context)
     return (
       <nav className='header'>
         <h1>
@@ -64,12 +62,11 @@ export default class Header extends Component {
             Salem Bus
           </Link>
         </h1>
-        {/* {TokenService.hasAuthToken() */}
-        {this.context.authToken
+        {/* {this.context.authToken
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
-        { '|' }
-        {this.renderMenu()}
+        { '|' } */}
+        {/* {this.renderMenu()} */}
       </nav>
     )
   }

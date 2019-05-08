@@ -16,12 +16,15 @@ export default class LateBusPage extends Component {
 
   state={
     stopId: null,
-    route: null,
+    routeShortName: null,
     delay: null
   }
 
   componentDidMount() {
     this.context.clearError()
+    const { stopId,routeShortName } = this.props.location.state
+    this.setState({ stopId, routeShortName })
+    
     BusStopApiService.getRoutes()
       .then(this.context.setRouteList)
       .catch(this.context.setError)
@@ -39,22 +42,11 @@ export default class LateBusPage extends Component {
     this.setState({ delay: event.target.value })
   }
 
-  // user_id, 
-  // stop_id, 
-  // stop_number, 
-  // route_id,
-  // route_short_name,
-  // delay_time,
-
   handleSubmit = (event) => {
     event.preventDefault()
-    //console.log(`${this.state.stopId} ${this.state.route} ${this.state.delay}`)
     let delay = {
-      user_name: this.context.userName,
-      stop_id: this.state.stopId,
-      stop_number: this.state.number,
-      route_id: this.state.routeId,
-      route_short_name: this.state.route,
+      stop_number: this.state.stopId,
+      route_short_name: this.state.routeShortName,
       delay_time: this.state.delay,
     }
     BusStopApiService.postDelay(delay)
@@ -66,6 +58,8 @@ export default class LateBusPage extends Component {
       <Section className='LateBusPage'>
         <LateBusForm 
           routes={this.context.routeList}
+          stopId={this.state.stopId}
+          routeShortName={this.state.routeShortName}
           handleChangeStopId={this.handleChangeStopId}
           handleChangeRouteName={this.handleChangeRouteName}
           handleChangeDelay={this.handleChangeDelayb}

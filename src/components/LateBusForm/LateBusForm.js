@@ -12,8 +12,16 @@ export default class LateBusPage extends Component {
 
   render() {
     const { error } = this.state 
-
-    const routes = this.props.routes.map(route => <option value={route.routeShortName}>{route.routeShortName}</option>)
+    
+    // build routes dropdown
+    // if routeShortName matches pass in value, set to selected
+    const routes = this.props.routes.map(route => {
+      if(this.props.routeShortName == route.routeShortName) {
+        return <option selected value={route.routeShortName}>{route.routeShortName}</option>
+      } else {
+        return <option value={route.routeShortName}>{route.routeShortName}</option>
+      }
+    })
     
     return (
       <Section list className='LateBusPage'>
@@ -33,6 +41,7 @@ export default class LateBusPage extends Component {
               name='stopId'
               type='text'
               id='stopId'
+              value={this.props.stopId}
               onChange={this.props.handleChangeStopId}
             />
           </div>
@@ -57,7 +66,7 @@ export default class LateBusPage extends Component {
               required
               name='route'
               id='route'
-              onChange={this.props.handleChangeDelay}
+              // onChange={this.props.handleChangeDelay}
             >
               <option>10 minutes late</option>
               <option>5 minutes late</option>

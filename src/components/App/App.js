@@ -37,15 +37,16 @@ export default class App extends Component {
               path={'/'}
               component={StopListPage}
             />
-            <PublicOnlyRoute
+            {/* <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
-            />
-            <PublicOnlyRoute
+            /> */}
+            {/* <PublicOnlyRoute
               path={'/register'}
               component={RegistrationPage}
-            />
-            <PrivateRoute 
+            /> */}
+            {/* <PrivateRoute  */}
+            <PublicOnlyRoute
               path={'/late'}
               component={LateBusPage}
             />

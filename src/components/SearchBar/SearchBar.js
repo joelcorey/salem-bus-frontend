@@ -29,7 +29,6 @@ export default class SearchBar extends Component {
   }
 
   render() {
-    const { error } = this.state
     return (
       <div className="search-menu">
         <form onSubmit={this.handleSubmitSearch}>

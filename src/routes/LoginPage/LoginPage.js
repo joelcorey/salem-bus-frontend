@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
 import { Section } from '../../components/Utils/Utils'
-import BusContext, { BusProvider } from '../../contexts/BusContext'
+import BusContext from '../../contexts/BusContext'
 
 export default class LoginPage extends Component {
   static contextType = BusContext
