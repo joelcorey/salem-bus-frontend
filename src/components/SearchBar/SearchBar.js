@@ -26,6 +26,12 @@ export default class SearchBar extends Component {
     BusStopApiService.getTimesAtStop(stopId, this.getTime())
       .then(this.context.setStopList)
       .catch(this.context.setError)
+    
+    BusStopApiService.getDelays()
+      .then(this.context.setDelaysList)
+      .catch(this.context.clearError)
+
+    
   }
 
   render() {

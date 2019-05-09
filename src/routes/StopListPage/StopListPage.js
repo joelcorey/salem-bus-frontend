@@ -16,7 +16,15 @@ export default class StopListPage extends Component {
     //   .catch(this.context.setError)
   }
 
+  componentWillUpdate() {
+    // BusStopApiService.getDelays()
+    //   .then(this.context.setDelaysList)
+    //   .catch(this.context.clearError)
+    
+  }
+
   renderStops() {
+    console.log(this.context.delaysList)
     const { stopList = [] } = this.context
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
     

@@ -18,16 +18,14 @@ export class BusProvider extends Component {
   state = {
     stopList: [],
     routeList: [],
-    delayList: [],
+    delaysList: [],
     authToken: TokenService.getAuthToken(),
     userName: null,
     error: null
   }
 
-  updateDelayList = delay => {
-    // updatedDelayList = this.state.delayList.push(delay)
-    // this.setState({ updatedDelayList })
-    this.setState({ delayList: [...this.state.delayList, delay] })
+  setDelaysList = delaysList => {
+    this.setState({ delaysList })
   }
 
   setUserName = userName => {
@@ -59,12 +57,14 @@ export class BusProvider extends Component {
     const value = {
       stopList: this.state.stopList,
       routeList: this.state.routeList,
+      delaysList: this.state.delaysList,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setStopList: this.setStopList,
       setRouteList: this.setRouteList,
       setAuthToken: this.setAuthToken,
+      setDelaysList: this.setDelaysList,
       authToken: this.state.authToken
     }
 

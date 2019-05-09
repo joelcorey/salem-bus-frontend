@@ -36,6 +36,19 @@ const BusStopApiService = {
           : res.json()
       )
   },
+  getDelays() {
+    return fetch(`${config.API_ENDPOINT}/delays`, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      },
+    })
+      .then(res=>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()  
+      )
+  },
   postDelay(delay) {
     return fetch(`${config.API_ENDPOINT}/delays`, {
       method: 'POST',
