@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BusContext from '../../contexts/BusContext'
-import BusStopApiService from '../../services/bus-stop-api-service'
+//import BusStopApiService from '../../services/bus-stop-api-service'
 import { Section } from '../../components/Utils/Utils'
 import StopListItem from '../../components/StopListItem/StopListItem'
 import SearchBar from '../../components/SearchBar/SearchBar'
@@ -16,24 +16,31 @@ export default class StopListPage extends Component {
     //   .catch(this.context.setError)
   }
 
-  componentWillUpdate() {
-    // BusStopApiService.getDelays()
-    //   .then(this.context.setDelaysList)
-    //   .catch(this.context.clearError)
-    
-  }
-
   renderStops() {
-    console.log(this.context.delaysList)
+    
     const { stopList = [] } = this.context
+    const delaysList = this.context.delaysList
+    
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
     
     const seen = new Set()
-    const filteredStops = stopList.filter(el => {
-      const duplicate = seen.has(el.routeShortName);
-      seen.add(el.routeShortName);
+    const filteredStops = stopList.filter(stop => {
+      const duplicate = seen.has(stop.routeShortName);
+      seen.add(stop.routeShortName);
       return !duplicate;
     });
+
+    filteredStops.map(stop => {
+      for (let i = 0; i < delaysList.length; i++) {
+        if (stop.routeShortName === delaysList[i].routeShortName) {
+          stop.delay = delaysList[i].delayTime
+        }
+        else {
+          stop.delay = ''
+        }
+        
+      }
+    })
    
     return filteredStops.map(stop =>
       <StopListItem
@@ -49,6 +56,7 @@ export default class StopListPage extends Component {
         tripRouteId={stop.tripRouteId}
         routeShortName={stop.routeShortName}
         routeLongName={stop.routeLongName}
+
       />
     )
   }
