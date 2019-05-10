@@ -16,12 +16,39 @@ export default class StopListPage extends Component {
     //   .catch(this.context.setError)
   }
 
+  fetchCurrentDateHour(){
+    let currentDate = new Date().toLocaleString({timeZone: "America/Los_Angeles"})
+    let splitTime = currentDate.split(" ")
+    //console.log(splitTime[1])
+    let hour = splitTime[1].split(":")
+    return hour[0]
+  }
+
+  fetchStopHour(time) {
+    time = time.split(":")
+    //convert form UTC to PST / west coast US time
+    let adjust = time[0] - 7
+    return adjust
+  }
+
+  compareCurrentTimeToStop(time, stopTime) {
+    // console.log(parseInt(time) - parseInt(stopTime))
+    // console.log(parseInt(time))
+    // console.log(parseInt(stopTime))
+    if (parseInt(time) === parseInt(stopTime)) {
+      return true
+    }
+    else {
+      return false
+    }
+  }
+
   renderStops() {
     
     const { stopList = [] } = this.context
     const delaysList = this.context.delaysList
-    //const reg = /([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]/g/
-    
+    let currentHour = this.fetchCurrentDateHour()
+
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
     
     const seen = new Set()
@@ -30,11 +57,20 @@ export default class StopListPage extends Component {
       seen.add(stop.routeShortName);
       return !duplicate;
     });
-
+    
     filteredStops.map((stop, reg) => {
       for (let i = 0; i < delaysList.length; i++) {
-        console.log(/[01][0-9]:[0-5][0-9]:[0-5][0-9]/g.exec(delaysList[i].dateCreated))
-        if (stop.routeShortName === delaysList[i].routeShortName) {
+
+        // a temporary solution for only getting delays within the current hour
+        // does not yet account for minutes
+        let time = /[01][0-9]:[0-5][0-9]:[0-5][0-9]/g.exec(delaysList[i].dateCreated)
+        //this.fetchStopHour(time[0])
+        let hour = this.fetchCurrentDateHour()
+        let stopHour = this.fetchStopHour(time[0])
+        let compare = this.compareCurrentTimeToStop(hour, stopHour)
+        //console.log(compare)
+        
+        if (stop.routeShortName === delaysList[i].routeShortName && compare === true) {
           stop.delay = delaysList[i].delayTime
         }
         else {
