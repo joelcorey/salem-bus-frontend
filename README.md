@@ -1,7 +1,7 @@
 MVP
 A mobile-fist single-page-web-app for Salem, Oregon bus transit.
 
-Unlike many other cities across the United States, Salem, Oregon has failed to develop a worthwhile mobile application for its bus transit system. The goal of this project is to address that in the easiest, most-convenient fashion possible.
+Unlike many other cities across the United States, Salem, Oregon has failed to develop a worthwhile mobile application for its bus transit system. The goal of this project is to address that in the easiest, most-convenient fashion possible. The web app will present the MVP for this concept.
 
 ## Updated user stories
 - The user will be able to load the page and see a search bar
