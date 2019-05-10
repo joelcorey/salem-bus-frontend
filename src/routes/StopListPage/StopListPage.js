@@ -20,6 +20,7 @@ export default class StopListPage extends Component {
     
     const { stopList = [] } = this.context
     const delaysList = this.context.delaysList
+    //const reg = /([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]/g/
     
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
     
@@ -30,8 +31,9 @@ export default class StopListPage extends Component {
       return !duplicate;
     });
 
-    filteredStops.map(stop => {
+    filteredStops.map((stop, reg) => {
       for (let i = 0; i < delaysList.length; i++) {
+        console.log(/[01][0-9]:[0-5][0-9]:[0-5][0-9]/g.exec(delaysList[i].dateCreated))
         if (stop.routeShortName === delaysList[i].routeShortName) {
           stop.delay = delaysList[i].delayTime
         }
@@ -56,7 +58,7 @@ export default class StopListPage extends Component {
         tripRouteId={stop.tripRouteId}
         routeShortName={stop.routeShortName}
         routeLongName={stop.routeLongName}
-
+        delay={stop.delay}
       />
     )
   }

@@ -5,8 +5,9 @@ import BusContext from '../../contexts/BusContext'
 
 export default class StopListItem extends Component {
   static contextType = BusContext
-
+  
   render() {
+    
     return (
       <div className='StopListItem'>
        
@@ -15,6 +16,7 @@ export default class StopListItem extends Component {
         </h4>
         {this.props.stopDesc} <br />
         Reported arrival: {this.props.arrival}
+        <br />
         <Link 
           to={{
             pathname: '/late',
@@ -24,8 +26,9 @@ export default class StopListItem extends Component {
             }
           }}>
           Late bus
-          
         </Link>
+        <br />
+        Delay: {this.props.delay}
         <hr />    
       </div>
     )
