@@ -64,12 +64,17 @@ export default class StopListPage extends Component {
         // a temporary solution for only getting delays within the current hour
         // does not yet account for minutes
         let time = /[01][0-9]:[0-5][0-9]:[0-5][0-9]/g.exec(delaysList[i].dateCreated)
-        //this.fetchStopHour(time[0])
-        let hour = this.fetchCurrentDateHour()
-        let stopHour = this.fetchStopHour(time[0])
-        let compare = this.compareCurrentTimeToStop(hour, stopHour)
-        //console.log(compare)
-        
+        let hour
+        let stopHour
+        let compare
+
+        if (time) {
+          hour = this.fetchCurrentDateHour()
+          stopHour = this.fetchStopHour(time[0])
+          compare = this.compareCurrentTimeToStop(hour, stopHour)
+        }
+       
+        //if (stop.routeShortName === delaysList[i].routeShortName) {
         if (stop.routeShortName === delaysList[i].routeShortName && compare === true) {
           stop.delay = delaysList[i].delayTime
         }
