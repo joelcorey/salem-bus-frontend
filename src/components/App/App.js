@@ -15,7 +15,6 @@ import LateBusPage from '../../routes/LateBusPage/LateBusPage'
 
 export default class App extends Component {
   state = {
-    isLoading: false,
     firstLoad: true,
     message: 'hi',
   }

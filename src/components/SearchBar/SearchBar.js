@@ -22,6 +22,9 @@ export default class SearchBar extends Component {
 
   handleSubmitSearch = ev => {
     ev.preventDefault() 
+
+    this.context.setLoading(true);
+
     let stopId = ev.target.stop_id.value 
     BusStopApiService.getTimesAtStop(stopId, this.getTime())
       .then(this.context.setStopList)
@@ -35,11 +38,12 @@ export default class SearchBar extends Component {
   }
 
   render() {
+    console.log(this.context)
     return (
       <div className="search-menu">
         <form onSubmit={this.handleSubmitSearch}>
           <input type="text" name="stop_id" placeholder="Enter a stop id" />
-          <button type="submit">Submit</button>
+          <button type="submit">Find</button>
         </form>
       </div>
     )

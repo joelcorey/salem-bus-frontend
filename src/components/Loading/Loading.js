@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Loading.css';
 import loadingImgJpg from './loading.jpg';
+import BusContext from '../../contexts/BusContext';
 
-export default function Loading(props) {
+export default class Loading extends Component {
+  static contextType = BusContext;
+    
+  render() {
+    let loading;
+    console.log(this.context.loading)
+    if (this.context.loading) {
+      loading = (
+        <div className="loading">
+          <img src={loadingImgJpg} alt="loading spinner" />
+        </div>
+      )
+    }
 
-  let loading;
-
-  if (props.loading) {
-    loading = (
-      <div className="loading">
-        <img src={loadingImgJpg} alt="loading spinner" />
-      </div>
+    return (
+      <>
+        {loading}
+      </>
     )
   }
   
-  return (
-    <>
-      {loading}
-    </>
-  )
   
 }
