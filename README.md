@@ -3,6 +3,10 @@ A mobile-fist single-page-web-app for Salem, Oregon bus transit.
 
 Unlike many other cities across the United States, Salem, Oregon has failed to develop a worthwhile mobile application for its bus transit system. The goal of this project is to address that in the easiest, most-convenient fashion possible. The web app will present the MVP for this concept.
 
+## STOPS.md
+
+If you are not in Salem, OR it will be impossible for you to know what the stop id's are. Please see STOPS.md for a list of valid stops throughout the city.
+
 ## Updated user stories
 - The user will be able to load the page and see a search bar
 - The user will be able to input a bus stop ID
