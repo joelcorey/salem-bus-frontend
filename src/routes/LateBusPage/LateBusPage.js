@@ -3,6 +3,7 @@ import BusContext from '../../contexts/BusContext'
 import BusStopApiService from '../../services/bus-stop-api-service'
 import { Section } from '../../components/Utils/Utils'
 import LateBusForm from '../../components/LateBusForm/LateBusForm'
+import './LateBusPage.css'
 
 export default class LateBusPage extends Component {
   static contextType = BusContext
