@@ -1,9 +1,11 @@
 .StopListItem {
   width: 50%;
+  height: auto;
   /* grid-column: 1 / 8; */
   /* margin: 1vw 0 1vw 0; */
   border-style: solid;
-  border-width: 0 0 1px 0; 
+  border-width: 0 0 3px 0;
+  border-radius: 2px;
   margin: 0 auto 2vh;
   padding: 1%;
 }
@@ -16,7 +18,7 @@ h4 {
 
  /* unvisited link */
  a:link {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -38,3 +40,16 @@ a:active {
   text-decoration: underline;
 } 
 
+.StopInformation {
+  padding: 0 0 2vh 0;
+}
+
+.LinkLateBus {
+  background-color: #282c34;
+  color: white;
+  padding: 1vh 2vw 1vh 2vw;
+  margin: 0 0 1vh 0;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+}

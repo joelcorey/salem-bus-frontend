@@ -8,7 +8,7 @@ export default class StopListItem extends Component {
 
   delay(delay) {
     if (delay) {
-      return ( 'Delay: ' + delay)
+      return ( <p>'Delay: ' + delay</p> )
     }
     return
   }
@@ -17,22 +17,25 @@ export default class StopListItem extends Component {
     
     return (
       <div className='StopListItem'>
-       
-        <h4>
-          {this.props.stopId} - {this.props.routeShortName} - {this.props.stopName}
-        </h4>
-        {this.props.stopDesc} <br />
-        Reported arrival: {this.props.arrival}
-        <br />
+        
+        <div className="StopInformation">
+          <h4>
+            {this.props.stopId} - {this.props.routeShortName} - {this.props.stopName}
+          </h4>
+          {this.props.stopDesc}
+          Reported arrival: {this.props.arrival}
+        </div>
         <Link 
+          className="LinkLateBus"
           to={{
             pathname: '/late',
             state: {
               stopId: this.props.stopId,
               routeShortName: this.props.routeShortName,
             }
-          }}>
-          Late bus
+          }}
+        >
+          Report late bus
         </Link>
         <br />
         
