@@ -1,12 +1,31 @@
 .header {
-  grid-column: 1/8;
-  grid-row: 1/2;
+  background-color: #282c34;
+  /* grid-column: 1/8;
+  grid-row: 1/2; */
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  /* align-items: center; */
 }
 
 .header h1 {
-  /* margin-right: 10%; */
+  margin-left: 5%;
+}
+
+ /* unvisited link */
+ a:link {
+  color: #D8D8D8;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #D8D8D8;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #D8D8D8;
+  text-decoration: underline;
 }
