@@ -57,8 +57,7 @@ export default class Header extends Component {
       <nav className='header'>
         <h1>
           <Link to='/'>
-            {/* Header icon/image here in future */}
-            {' '}
+            
             Salem Bus
           </Link>
         </h1>
