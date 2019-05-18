@@ -1,0 +1,7 @@
+.StopsListPage {
+  width: 100vw;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

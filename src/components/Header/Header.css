@@ -8,10 +8,6 @@
   /* align-items: center; */
 }
 
-.header h1 {
-  margin-left: 5%;
-}
-
  /* unvisited link */
 .header a:link {
   color: #D8D8D8;
