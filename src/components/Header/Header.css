@@ -13,19 +13,19 @@
 }
 
  /* unvisited link */
- a:link {
+.header a:link {
   color: #D8D8D8;
   text-decoration: none;
 }
 
 /* visited link */
-a:visited {
+.header a:visited {
   color: #D8D8D8;
   text-decoration: none;
 }
 
 /* mouse over link */
-a:hover {
+.header a:hover {
   color: #D8D8D8;
   text-decoration: underline;
 }
