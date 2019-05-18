@@ -22,7 +22,12 @@ export class BusProvider extends Component {
     authToken: TokenService.getAuthToken(),
     userName: null,
     error: null,
-    loading: false
+    loading: false,
+    showTutorial: true
+  }
+
+  setShowTutorial = showTutorial => {
+    this.setState({ showTutorial })
   }
 
   setLoading = loading => {
@@ -42,7 +47,7 @@ export class BusProvider extends Component {
   }
 
   setStopList = stopList => {
-    this.setState({ stopList, loading: false })
+    this.setState({ stopList, loading: false, showTutorial: false })
   }
 
   setRouteList = routeList => {
@@ -72,7 +77,9 @@ export class BusProvider extends Component {
       setDelaysList: this.setDelaysList,
       authToken: this.state.authToken,
       setLoading: this.setLoading,
-      loading: this.state.loading
+      loading: this.state.loading,
+      setShowTutorial: this.setShowTutorial,
+      showTutorial: this.state.showTutorial
     }
 
     return (

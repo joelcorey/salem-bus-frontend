@@ -4,6 +4,7 @@ import BusContext from '../../contexts/BusContext'
 import { Section } from '../../components/Utils/Utils'
 import StopListItem from '../../components/StopListItem/StopListItem'
 import SearchBar from '../../components/SearchBar/SearchBar'
+import Tutorial from '../../components/Tutorial/Tutorial'
 import './StopListPage.css'
 
 export default class StopListPage extends Component {
@@ -47,6 +48,7 @@ export default class StopListPage extends Component {
     
     const { stopList = [] } = this.context
     const delaysList = this.context.delaysList
+    
     let currentHour = this.fetchCurrentDateHour()
 
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
@@ -106,6 +108,8 @@ export default class StopListPage extends Component {
 
   render() {
     const { error } = this.context
+    const showTutorial = this.context.showTutorial
+    console.log(showTutorial)
     return (
       <>
         <SearchBar />
@@ -113,7 +117,14 @@ export default class StopListPage extends Component {
         
           {error
             ? <p className='red'>There was an error, try again</p>
-            : this.renderStops()}
+            : this.renderStops()
+          }
+
+          {showTutorial
+            ? <Tutorial />
+            : ''
+          }
+          
         </Section>
       </>
     )
