@@ -8,7 +8,7 @@ export default class Loading extends Component {
     
   render() {
     let loading;
-    console.log(this.context.loading)
+
     if (this.context.loading) {
       loading = (
         <div className="loading">

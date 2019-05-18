@@ -57,7 +57,6 @@ export default class Header extends Component {
       <nav className='header'>
         <h1>
           <Link to='/'>
-            
             Salem Bus
           </Link>
         </h1>

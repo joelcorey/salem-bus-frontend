@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import BusContext from '../../contexts/BusContext'
-import { Section } from '../../components/Utils/Utils'
-import { Button, Input, Select } from '../Utils/Utils'
+import { Button, Input } from '../Utils/Utils'
 import './LateBusForm.css'
 export default class LateBusPage extends Component {
   static contextType = BusContext
@@ -16,7 +15,7 @@ export default class LateBusPage extends Component {
     // build routes dropdown
     // if routeShortName matches pass in value, set to selected
     const routes = this.props.routes.map(route => {
-      if(this.props.routeShortName == route.routeShortName) {
+      if(this.props.routeShortName === route.routeShortName) {
         return <option selected value={route.routeShortName}>{route.routeShortName}</option>
       } else {
         return <option value={route.routeShortName}>{route.routeShortName}</option>

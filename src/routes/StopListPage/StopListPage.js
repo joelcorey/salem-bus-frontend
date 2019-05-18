@@ -49,8 +49,6 @@ export default class StopListPage extends Component {
     const { stopList = [] } = this.context
     const delaysList = this.context.delaysList
     
-    let currentHour = this.fetchCurrentDateHour()
-
     stopList.sort((a,b) => (a.arrival > b.arrival) ? 1 : -1)
     
     const seen = new Set()
@@ -85,11 +83,12 @@ export default class StopListPage extends Component {
         }
         
       }
+      return stop;
     })
    
-    return filteredStops.map(stop =>
+    return filteredStops.map((stop, index) =>
       <StopListItem
-        key={stop.id}
+        key={index}
         stopId={stop.stopId}
         stopCode={stop.stopCode}
         stopName={stop.stopName}
@@ -107,9 +106,8 @@ export default class StopListPage extends Component {
   }
 
   render() {
-    const { error } = this.context
-    const showTutorial = this.context.showTutorial
-    console.log(showTutorial)
+    const { error, showTutorial } = this.context
+
     return (
       <>
         <SearchBar />

@@ -38,7 +38,6 @@ export default class SearchBar extends Component {
   }
 
   render() {
-    console.log(this.context)
     return (
       <div className="search-menu">
         <form onSubmit={this.handleSubmitSearch}>

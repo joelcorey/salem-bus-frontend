@@ -44,7 +44,7 @@ export default class LateBusPage extends Component {
   }
 
   handleSubmit = (event) => {
-    const { location, history } = this.props
+    const { history } = this.props
     event.preventDefault()
     let delay = {
       stop_number: this.state.stopId,
