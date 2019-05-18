@@ -1,0 +1,7 @@
+.LateBusPage {
+  width: 50vw;
+  grid-column: 1 / 8;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}

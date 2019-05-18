@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (33fec40, 2019-01-16)"
+   sodipodi:docname="busStopSign002.svg">
+  <defs
+     id="defs2">
+    <clipPath
+       id="clipPath4570"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         ry="7.9153543"
+         y="213.61191"
+         x="-52.919361"
+         height="146.4637"
+         width="304.68726"
+         id="rect4572"
+         style="fill:#f2f2f2;stroke:#000000;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath4570-7"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         ry="7.9153543"
+         y="213.61191"
+         x="-52.919361"
+         height="146.4637"
+         width="304.68726"
+         id="rect4572-9"
+         style="fill:#f2f2f2;stroke:#000000;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-85.714286"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1593"
+     inkscape:window-height="1059"
+     inkscape:window-x="1446"
+     inkscape:window-y="929"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="layer1-3"
+       inkscape:label="Layer 1"
+       transform="translate(0.75594967,5.8586341)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         rx="0"
+         ry="11.339286"
+         style="fill:#f2f2f2;stroke:#000000;stroke-width:1.32291663;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="24.857141"
+         x="13.98512"
+         height="231.6994"
+         width="173.1131"
+         id="rect3713" />
+      <rect
+         clip-path="url(#clipPath4570)"
+         rx="0"
+         ry="7.915359"
+         style="fill:#026099;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="91.446526"
+         x="17.130568"
+         height="161.73715"
+         width="166.87827"
+         id="rect3713-3" />
+      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,8.3910712,-1.0583333)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ececec;fill-opacity:1;stroke:none"
+         id="flowRoot4601"
+         xml:space="preserve"><flowRegion
+           style="fill:#ececec"
+           id="flowRegion4603"><rect
+             style="fill:#ececec"
+             y="841.09113"
+             x="110"
+             height="98.571426"
+             width="301.42856"
+             id="rect4605" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.66666412px;font-family:Sawasdee;-inkscape-font-specification:Sawasdee"
+           id="flowPara4607">STOP ID</flowPara></flowRoot>      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,2.5702384,-2.6458334)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot4609"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4611"><rect
+             y="848.23395"
+             x="447.14285"
+             height="88.571426"
+             width="214.28572"
+             id="rect4613" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:74.66666412px;font-family:Sawasdee;-inkscape-font-specification:'Sawasdee Bold';fill:#e6e6e6"
+           id="flowPara4615">444</flowPara></flowRoot>      <rect
+         clip-path="url(#clipPath4570-7)"
+         rx="0"
+         ry="7.915359"
+         style="fill:#026099;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         y="91.446526"
+         x="17.130568"
+         height="161.73715"
+         width="166.87827"
+         id="rect3713-3-7"
+         transform="matrix(1,0,0,-1,0,280.64373)" />
+      <g
+         transform="translate(24.341676)"
+         id="g4680">
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot4638"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           transform="matrix(0.26458333,0,0,0.26458333,21.695834,18.520831)"><flowRegion
+             id="flowRegion4640"><rect
+               id="rect4642"
+               width="132"
+               height="119"
+               x="96"
+               y="274.51968" /></flowRegion><flowPara
+             id="flowPara4644"
+             style="font-size:96px">3</flowPara></flowRoot>        <flowRoot
+           xml:space="preserve"
+           id="flowRoot4646"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           transform="matrix(0.26458333,0,0,0.26458333,-9.5250003,67.204166)"><flowRegion
+             id="flowRegion4648"><rect
+               id="rect4650"
+               width="224"
+               height="204"
+               x="152"
+               y="316.51968" /></flowRegion><flowPara
+             id="flowPara4652"
+             style="font-size:96px">13</flowPara></flowRoot>      </g>
+      <g
+         transform="translate(6.879167)"
+         id="g4719">
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot4662"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           transform="matrix(0.26458333,0,0,0.26458333,17.727095,-3.3072916)"><flowRegion
+             id="flowRegion4664"><rect
+               id="rect4666"
+               width="234"
+               height="196.99997"
+               x="293"
+               y="357.51968" /></flowRegion><flowPara
+             id="flowPara4668"
+             style="font-size:29.33333397px;line-height:0">TO</flowPara><flowPara
+             id="flowPara4670"
+             style="font-size:29.33333397px;line-height:0">Downtown</flowPara></flowRoot>        <flowRoot
+           xml:space="preserve"
+           id="flowRoot4662-4"
+           style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           transform="matrix(0.26458333,0,0,0.26458333,17.648182,55.903119)"><flowRegion
+             id="flowRegion4664-9"><rect
+               id="rect4666-1"
+               width="234"
+               height="196.99997"
+               x="293"
+               y="357.51968" /></flowRegion><flowPara
+             id="flowPara4668-7"
+             style="font-size:29.33333397px;line-height:0">TO</flowPara><flowPara
+             id="flowPara4670-0"
+             style="font-size:29.33333397px;line-height:0">Downtown</flowPara></flowRoot>      </g>
+      <flowRoot
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot4721"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4723"><rect
+             y="133.98441"
+             x="98.994949"
+             height="89.095451"
+             width="571.34229"
+             id="rect4725" /></flowRegion><flowPara
+           id="flowPara4727" /></flowRoot>      <flowRoot
+         transform="matrix(0.26458333,0,0,0.26458333,34.925016,2.6458334)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         id="flowRoot4729"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4731"><rect
+             y="129.74176"
+             x="89.095451"
+             height="93.338097"
+             width="584.07019"
+             id="rect4733" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333588px;font-family:Sawasdee;-inkscape-font-specification:Sawasdee;fill:#e6e6e6"
+           id="flowPara4735">Bus stop sign</flowPara></flowRoot>    </g>
+  </g>
+</svg>

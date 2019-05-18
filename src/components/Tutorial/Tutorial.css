@@ -1,0 +1,9 @@
+img {
+  width: 20vw;
+  height: auto;
+}
+
+.Tutorial {
+  width: 100vw;
+  grid-column: 1 / 8;
+}
