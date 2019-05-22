@@ -1,6 +1,0 @@
-duplicate results in stop id search
-these are (99% sure) the two different directions of the route
-
-work around - as a proof of concept, just match route_short_name to stops search results
-
-need to build /delays (or similar) end point to post to and then query along with 

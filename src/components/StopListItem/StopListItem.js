@@ -5,27 +5,16 @@ import BusContext from '../../contexts/BusContext'
 
 export default class StopListItem extends Component {
   static contextType = BusContext
-
-  delay(delay) {
-    if (delay) {
-      return ( <p>'Delay: ' + delay</p> )
-    }
-    return
-  }
   
   render() {
-    
-    return (
-      <div className='StopListItem'>
-        
-        <div className="StopInformation">
-          <h4>
-            {this.props.stopId} - {this.props.routeShortName} - {this.props.stopName}
-          </h4>
-          {this.props.stopDesc}
-          Reported arrival: {this.props.arrival}
-        </div>
-        <Link 
+    let delay;
+
+    if (this.props.delay) {
+        delay = <p className="delay">Delay: {this.props.delay}</p> 
+    }
+    else {
+      delay =
+      <Link 
           className="LinkLateBus"
           to={{
             pathname: '/late',
@@ -37,10 +26,22 @@ export default class StopListItem extends Component {
         >
           Report late bus
         </Link>
-        <br />
+    }
+    
+    return (
+      <div className='StopListItem'>
         
-        {this.delay(this.props.delay)}
-           
+        <div className="StopInformation">
+          <h4>
+            {this.props.stopId} - {this.props.routeShortName} - {this.props.stopName}
+          </h4>
+          {this.props.stopDesc}
+          Reported arrival: {this.props.arrival}
+        </div>
+
+        {delay}
+        
+        <br />
       </div>
     )
   }
